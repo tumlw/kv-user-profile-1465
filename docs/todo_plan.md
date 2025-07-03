@@ -2,17 +2,17 @@
 
 ## Giai Đoạn 1: Thiết Lập và Cấu Trúc Dự Án
 - [x] Tạo dự án iOS mới với SwiftUI
-- [ ] Thiết lập cấu trúc thư mục theo mô hình MVVM
-- [ ] Cấu hình target iOS 15.0+
-- [ ] Thiết lập Git repository
-- [ ] Tạo file README.md với thông tin dự án
+- [x] Thiết lập cấu trúc thư mục theo mô hình MVVM
+- [x] Cấu hình target iOS 15.0+
+- [x] Thiết lập Git repository
+- [x] Tạo file README.md với thông tin dự án
 
 ## Giai Đoạn 2: Triển Khai Model và ViewModel
-- [ ] Tạo User Model với các thuộc tính: username, email, avatar URL
-- [ ] Phát triển ProfileViewModel với Observable Object
-- [ ] Triển khai các phương thức để quản lý dữ liệu người dùng
-- [ ] Thiết lập các biến trạng thái cho notification toggle
-- [ ] Triển khai phương thức lưu trữ trạng thái thông báo với AppStorage
+- [x] Tạo User Model với các thuộc tính: username, email, avatar URL
+- [x] Phát triển ProfileViewModel với Observable Object
+- [x] Triển khai các phương thức để quản lý dữ liệu người dùng
+- [x] Thiết lập các biến trạng thái cho notification toggle
+- [x] Triển khai phương thức lưu trữ trạng thái thông báo với AppStorage
 
 ## Giai Đoạn 3: Phát Triển Các Thành Phần UI
 - [ ] Tạo khung ProfileView chính
