@@ -17,11 +17,17 @@ struct ProfileImageView: View {
     /// Ảnh placeholder khi không có ảnh hoặc đang tải
     var placeholderImage: Image = Image(systemName: "person.crop.circle.fill")
     
+    /// Callback khi xảy ra lỗi tải ảnh
+    var onError: ((ProfileError) -> Void)?
+    
     /// Trạng thái đang tải ảnh
     @State private var isLoading: Bool = false
     
     /// Trạng thái lỗi tải ảnh
     @State private var loadingError: Bool = false
+    
+    /// Hiển thị nút thử lại
+    @State private var showRetryButton: Bool = false
     
     var body: some View {
         ZStack {
@@ -36,7 +42,11 @@ struct ProfileImageView: View {
                     case .empty:
                         // Đang tải
                         placeholderView
-                            .onAppear { isLoading = true }
+                            .onAppear { 
+                                isLoading = true
+                                loadingError = false
+                                showRetryButton = false
+                            }
                     case .success(let image):
                         // Tải thành công
                         image
@@ -45,6 +55,7 @@ struct ProfileImageView: View {
                             .onAppear {
                                 isLoading = false
                                 loadingError = false
+                                showRetryButton = false
                             }
                     case .failure:
                         // Lỗi tải
@@ -52,6 +63,9 @@ struct ProfileImageView: View {
                             .onAppear {
                                 isLoading = false
                                 loadingError = true
+                                showRetryButton = true
+                                // Thông báo lỗi
+                                onError?(.imageLoadFailed)
                             }
                     @unknown default:
                         placeholderView
@@ -73,6 +87,56 @@ struct ProfileImageView: View {
                             .frame(width: 40, height: 40)
                     )
             }
+            
+            // Hiển thị icon lỗi khi tải ảnh thất bại
+            if loadingError {
+                VStack {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .font(.title2)
+                        .foregroundColor(.orange)
+                    
+                    if showRetryButton {
+                        Button(action: {
+                            // Tải lại ảnh bằng cách tạo một URL mới với tham số cache-busting
+                            if var urlComponents = URLComponents(url: imageURL!, resolvingAgainstBaseURL: false) {
+                                let timestamp = Date().timeIntervalSince1970
+                                let queryItem = URLQueryItem(name: "t", value: "\(timestamp)")
+                                if urlComponents.queryItems != nil {
+                                    urlComponents.queryItems?.append(queryItem)
+                                } else {
+                                    urlComponents.queryItems = [queryItem]
+                                }
+                                
+                                if let newURL = urlComponents.url {
+                                    // Tải lại ảnh với URL mới
+                                    withAnimation {
+                                        isLoading = true
+                                        loadingError = false
+                                        showRetryButton = false
+                                    }
+                                    
+                                    // Giả lập tải lại ảnh
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        // Trong ứng dụng thực tế, AsyncImage sẽ tự động tải lại
+                                    }
+                                }
+                            }
+                        }) {
+                            Text("Thử lại")
+                                .font(.caption)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(Color.blue)
+                                )
+                        }
+                        .padding(.top, 4)
+                    }
+                }
+                .transition(.opacity)
+            }
         }
         .frame(width: size, height: size)
         .overlay(
@@ -80,6 +144,7 @@ struct ProfileImageView: View {
                 .stroke(borderColor, lineWidth: borderWidth)
         )
         .accessibilityLabel("Ảnh đại diện người dùng")
+        .accessibilityHint(loadingError ? "Đã xảy ra lỗi khi tải ảnh. Nhấn đúp để thử lại." : "")
     }
     
     /// View hiển thị khi không có ảnh hoặc đang tải

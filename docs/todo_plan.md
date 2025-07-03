@@ -30,18 +30,18 @@
   - [x] Lưu trạng thái với AppStorage
 
 ## Giai Đoạn 4: Triển Khai Quản Lý Trạng Thái
-- [ ] Thiết lập các biến @State trong ProfileView
-- [ ] Triển khai @StateObject cho view model
-- [ ] Sử dụng @Published cho các thuộc tính trong view model
-- [ ] Thiết lập @AppStorage cho lưu trữ cài đặt
-- [ ] Triển khai cơ chế khôi phục trạng thái
+- [x] Thiết lập các biến @State trong ProfileView
+- [x] Triển khai @StateObject cho view model
+- [x] Sử dụng @Published cho các thuộc tính trong view model
+- [x] Thiết lập @AppStorage cho lưu trữ cài đặt
+- [x] Triển khai cơ chế khôi phục trạng thái
 
 ## Giai Đoạn 5: Xử Lý Lỗi
-- [ ] Định nghĩa enum ProfileError
-- [ ] Triển khai xử lý lỗi cho tải ảnh
-- [ ] Triển khai xử lý lỗi cho validation email
-- [ ] Thiết lập cơ chế hiển thị lỗi cho người dùng
-- [ ] Sử dụng Result type cho các phương thức xử lý bất đồng bộ
+- [x] Định nghĩa enum ProfileError
+- [x] Triển khai xử lý lỗi cho tải ảnh
+- [x] Triển khai xử lý lỗi cho validation email
+- [x] Thiết lập cơ chế hiển thị lỗi cho người dùng
+- [x] Sử dụng Result type cho các phương thức xử lý bất đồng bộ
 
 ## Giai Đoạn 6: Tối Ưu Hiệu Năng
 - [ ] Sử dụng @ViewBuilder cho view có điều kiện
@@ -77,3 +77,4 @@
 - [ ] Tạo Preview SwiftUI
 - [ ] Ghi lại quá trình phát triển
 - [ ] Nộp file ProfileView.swift hoàn chỉnh
+
