@@ -15,19 +15,19 @@
 - [x] Triển khai phương thức lưu trữ trạng thái thông báo với AppStorage
 
 ## Giai Đoạn 3: Phát Triển Các Thành Phần UI
-- [ ] Tạo khung ProfileView chính
-- [ ] Thiết kế và triển khai ProfileImageView
-  - [ ] Hiển thị hình ảnh tròn với viền
-  - [ ] Xử lý placeholder khi không có ảnh
-  - [ ] Triển khai AsyncImage cho tải ảnh
-- [ ] Thiết kế và triển khai UserInfoView
-  - [ ] Hiển thị tên người dùng với kiểu chữ phù hợp
-  - [ ] Hiển thị email người dùng
-  - [ ] Áp dụng spacing và alignment đúng cách
-- [ ] Triển khai NotificationToggleView
-  - [ ] Sử dụng Toggle native với state binding
-  - [ ] Thêm phản hồi haptic
-  - [ ] Lưu trạng thái với AppStorage
+- [x] Tạo khung ProfileView chính
+- [x] Thiết kế và triển khai ProfileImageView
+  - [x] Hiển thị hình ảnh tròn với viền
+  - [x] Xử lý placeholder khi không có ảnh
+  - [x] Triển khai AsyncImage cho tải ảnh
+- [x] Thiết kế và triển khai UserInfoView
+  - [x] Hiển thị tên người dùng với kiểu chữ phù hợp
+  - [x] Hiển thị email người dùng
+  - [x] Áp dụng spacing và alignment đúng cách
+- [x] Triển khai NotificationToggleView
+  - [x] Sử dụng Toggle native với state binding
+  - [x] Thêm phản hồi haptic
+  - [x] Lưu trạng thái với AppStorage
 
 ## Giai Đoạn 4: Triển Khai Quản Lý Trạng Thái
 - [ ] Thiết lập các biến @State trong ProfileView
