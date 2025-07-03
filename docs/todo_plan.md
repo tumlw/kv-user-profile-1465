@@ -43,19 +43,6 @@
 - [x] Thiết lập cơ chế hiển thị lỗi cho người dùng
 - [x] Sử dụng Result type cho các phương thức xử lý bất đồng bộ
 
-## Giai Đoạn 6: Tối Ưu Hiệu Năng
-- [ ] Sử dụng @ViewBuilder cho view có điều kiện
-- [ ] Triển khai id() modifier cho view identity
-- [ ] Tối ưu số lượng biến @State
-- [ ] Triển khai LazyVStack nếu cần
-- [ ] Thực hiện caching ảnh
-
-## Giai Đoạn 7: Hỗ Trợ Accessibility
-- [ ] Thêm accessibility label cho tất cả các thành phần UI
-- [ ] Triển khai hỗ trợ VoiceOver
-- [ ] Sử dụng màu sắc semantic
-- [ ] Hỗ trợ dynamic type
-
 ## Giai Đoạn 8: Tài Liệu và Kiểm Thử
 - [ ] Tạo tài liệu StateManagement.md
 - [ ] Viết tài liệu cho tất cả các biến trạng thái
@@ -70,11 +57,4 @@
   - [ ] Ảnh hồ sơ hiển thị chính xác
   - [ ] UI thích ứng với các kích thước màn hình khác nhau
   - [ ] Hỗ trợ cả chế độ sáng và tối
-
-## Giai Đoạn 9: Hoàn Thiện và Nộp
-- [ ] Xem lại toàn bộ mã nguồn
-- [ ] Đảm bảo tuân thủ các tiêu chuẩn chất lượng mã Swift
-- [ ] Tạo Preview SwiftUI
-- [ ] Ghi lại quá trình phát triển
-- [ ] Nộp file ProfileView.swift hoàn chỉnh
 
