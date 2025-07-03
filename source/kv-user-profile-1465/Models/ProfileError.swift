@@ -44,4 +44,24 @@ enum ProfileError: Error, LocalizedError {
             return "Khởi động lại ứng dụng và thử lại. Nếu vấn đề vẫn tiếp diễn, vui lòng liên hệ hỗ trợ."
         }
     }
+}
+
+/// Extension để so sánh hai giá trị ProfileError
+extension ProfileError: Equatable {
+    static func == (lhs: ProfileError, rhs: ProfileError) -> Bool {
+        switch (lhs, rhs) {
+        case (.imageLoadFailed, .imageLoadFailed):
+            return true
+        case (.invalidEmail, .invalidEmail):
+            return true
+        case (.userDataLoadFailed, .userDataLoadFailed):
+            return true
+        case (.settingsSaveFailed, .settingsSaveFailed):
+            return true
+        case (.networkError(let lhsMessage), .networkError(let rhsMessage)):
+            return lhsMessage == rhsMessage
+        default:
+            return false
+        }
+    }
 } 

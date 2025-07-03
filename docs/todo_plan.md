@@ -44,17 +44,17 @@
 - [x] Sử dụng Result type cho các phương thức xử lý bất đồng bộ
 
 ## Giai Đoạn 8: Tài Liệu và Kiểm Thử
-- [ ] Tạo tài liệu StateManagement.md
-- [ ] Viết tài liệu cho tất cả các biến trạng thái
-- [ ] Thêm comment trong mã nguồn
+- [x] Tạo tài liệu StateManagement.md
+- [x] Viết tài liệu cho tất cả các biến trạng thái
+- [x] Thêm comment trong mã nguồn
 - [ ] Kiểm tra chất lượng mã
-  - [ ] Không có cảnh báo khi biên dịch
-  - [ ] Tuân thủ vòng đời SwiftUI view
+  - [x] Không có cảnh báo khi biên dịch
+  - [x] Tuân thủ vòng đời SwiftUI view
   - [ ] Xử lý lỗi đúng cách
-  - [ ] Sử dụng SwiftUI modifier phù hợp
+  - [x] Sử dụng SwiftUI modifier phù hợp
 - [ ] Kiểm tra chức năng
-  - [ ] Trạng thái toggle được lưu giữa các lần khởi động app
-  - [ ] Ảnh hồ sơ hiển thị chính xác
+  - [x] Trạng thái toggle được lưu giữa các lần khởi động app
+  - [x] Ảnh hồ sơ hiển thị chính xác
   - [ ] UI thích ứng với các kích thước màn hình khác nhau
-  - [ ] Hỗ trợ cả chế độ sáng và tối
+  - [x] Hỗ trợ cả chế độ sáng và tối
 
